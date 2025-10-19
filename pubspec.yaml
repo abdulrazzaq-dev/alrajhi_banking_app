@@ -1,0 +1,50 @@
+name: alrajhi_banking_app
+description: A high-level Flutter UI replica of Al-Rajhi Banking App interface.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # لدعم اللغة العربية (Localizations)
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2         # <<<<<<< تم تحديث الإصدار لحل مشكلة التعارض
+
+  # المكتبات المتقدمة لإدارة الحالة والوظائف
+  provider: ^6.1.2         # لإدارة الحالة (Themes, Balance Visibility)
+  shared_preferences: ^2.2.3 # لتخزين الرسالة المخصصة والوضع الداكن
+  shimmer: ^3.0.0          # لتأثير التحميل الأنيق (Skeleton Loading)
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+# ====================================================================
+# قسم Flutter
+# ====================================================================
+flutter:
+  uses-material-design: true
+
+  # تفعيل خط Cairo
+  fonts:
+    - family: Cairo # الاسم المستخدم في كود Dart
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo-ExtraBold.ttf
+          weight: 800
+        
+  # إعداد الأصول (Assets)
+  assets:
+    - assets/images/
+    - assets/icons/
